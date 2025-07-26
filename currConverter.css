@@ -1,0 +1,220 @@
+body {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.converter-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 32px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 60px rgba(108, 92, 231, 0.15);
+    border: none;
+}
+
+.converter-title {
+    color: #2d3748;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.converter-title i {
+    color: #6c5ce7;
+}
+
+.currency-section {
+    margin-bottom: 24px;
+}
+
+.currency-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: end;
+}
+
+.currency-group {
+    flex: 1;
+}
+
+.form-label {
+    color: #4a5568;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-select {
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #2d3748;
+    transition: all 0.2s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+.swap-btn {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c5ce7;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.swap-btn:hover {
+    background: #6c5ce7;
+    color: white;
+    border-color: #6c5ce7;
+    transform: rotate(180deg);
+}
+
+.amount-group {
+    margin-bottom: 24px;
+}
+
+.amount-input {
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #2d3748;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.amount-input:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+.convert-btn {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.convert-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.3);
+}
+
+.convert-btn:active {
+    transform: translateY(0);
+}
+
+.convert-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.result-container {
+    background: #f7fafc;
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 24px;
+    text-align: center;
+    border: 2px solid #e2e8f0;
+}
+
+.result-amount {
+    color: #6c5ce7;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.currency-symbol {
+    font-size: 28px;
+    opacity: 0.8;
+}
+
+.result-details {
+    color: #718096;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.loading-spinner {
+    display: none;
+    width: 16px;
+    height: 16px;
+}
+
+.error-message {
+    background: #fed7d7;
+    color: #c53030;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+    border: 1px solid #feb2b2;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+/* Custom scrollbar for select options */
+.form-select option {
+    padding: 8px;
+}

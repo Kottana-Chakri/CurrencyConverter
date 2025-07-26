@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="currConverter.css" rel="stylesheet">
+</head>
+<body>
+    <div class="converter-card">
+        <h1 class="converter-title">
+            <i class="fas fa-arrows-rotate"></i>
+            Currency Converter
+        </h1>
+        
+        <form id="currencyForm">
+            <div class="currency-row">
+                <div class="currency-group">
+                    <label for="fromCurrency" class="form-label">Source Currency</label>
+                    <select class="form-select" id="fromCurrency" required>
+                        <option value="">Select Currency</option>
+                    </select>
+                </div>
+                
+                <button type="button" class="swap-btn" id="swapBtn" title="Swap currencies">
+                    <i class="fas fa-arrows-rotate"></i>
+                </button>
+                
+                <div class="currency-group">
+                    <label for="toCurrency" class="form-label">Target Currency</label>
+                    <select class="form-select" id="toCurrency" required>
+                        <option value="">Select Currency</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="amount-group">
+                <label for="amount" class="form-label">Amount</label>
+                <input type="number" class="amount-input" id="amount" 
+                       placeholder="5000" min="0" step="0.01" required>
+            </div>
+            
+            <button type="submit" class="convert-btn" id="convertBtn">
+                <span class="loading-spinner spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                <span class="btn-text">Convert</span>
+            </button>
+        </form>
+        
+        <div class="result-container" id="resultBox" style="display: none;">
+            <div class="result-amount" id="resultAmount"></div>
+            <div class="result-details" id="resultDetails"></div>
+        </div>
+        
+        <div class="error-message" id="errorMessage" style="display: none;"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="currConverter.js"></script>
+</body>
+</html>
